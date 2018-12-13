@@ -35,9 +35,12 @@ class Request
                 $configs = include $path;
                 return $configs;
             }
-        } elseif (isset($s) && $s == 'site_packages') {
-            $list = array();
-            return $list;
+        } elseif (isset($s)) {
+           $path = ROOT . '/core/' . $s. '/index.php';
+            if (file_exists($path)) {
+                $configs = include $path;
+                return $configs;
+            }
         }
     }
 
