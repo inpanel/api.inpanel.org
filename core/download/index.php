@@ -7,6 +7,6 @@ $version = $_REQUEST['version'];
 $build = $_REQUEST['build'];
 
 if (isset($version) && isset($build)) {
-    $url = 'https://github.com/crogram/intranet/archive/' . $version . 'b' . $build . '.tar.gz';
+    $url = 'https://github.com/crogram/intranet/archive/v' . $version . 'b' . $build . '.tar.gz';
     Header("Location: $url");
 }
