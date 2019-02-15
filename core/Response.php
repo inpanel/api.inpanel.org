@@ -1,5 +1,5 @@
 <?php
-if (!defined('INTRANET_API')) {
+if (!defined('APP_API')) {
     exit();
 }
 

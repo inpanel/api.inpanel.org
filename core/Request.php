@@ -1,5 +1,5 @@
 <?php
-if (!defined('INTRANET_API')) {
+if (!defined('APP_API')) {
     exit();
 }
 
@@ -36,7 +36,7 @@ class Request
                 return $configs;
             }
         } elseif (isset($s)) {
-           $path = ROOT . '/core/' . $s. '/index.php';
+            $path = ROOT . '/core/' . $s . '/index.php';
             if (file_exists($path)) {
                 $configs = include $path;
                 return $configs;

@@ -1,1 +1,1 @@
-# intranet-api
+# API for InPanel
