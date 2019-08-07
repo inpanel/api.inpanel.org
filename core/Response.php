@@ -8,7 +8,7 @@ if (!defined('APP_API')) {
  */
 class Response
 {
-    const HTTP_VERSION = "HTTP/1.1";
+    // const HTTP_VERSION = "HTTP/1.1";
 
     // 返回结果
     public static function sendResponse($data)
@@ -20,11 +20,11 @@ class Response
         } else {
             $code = 404;
             $message = 'Not Found';
-            $data = array('error' => $message);
+            $data = array('code' => $code, 'error' => $message);
         }
 
         // 输出结果
-        header(self::HTTP_VERSION . " " . $code . " " . $message);
+        // header(self::HTTP_VERSION . " " . $code . " " . $message);
         $content_type = isset($_SERVER['CONTENT_TYPE']) ? $_SERVER['CONTENT_TYPE'] : $_SERVER['HTTP_ACCEPT'];
         header("Content-Type: application/json");
         echo self::encodeJson($data);

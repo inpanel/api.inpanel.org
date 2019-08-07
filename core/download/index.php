@@ -11,3 +11,4 @@ if (isset($version) && isset($build)) {
     $url = 'https://github.com/inpanel/inpanel/archive/' . $v . $version . 'b' . $build . '.tar.gz';
     Header("Location: $url");
 }
+exit(0);

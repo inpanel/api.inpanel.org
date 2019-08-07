@@ -1,6 +1,5 @@
-Options +FollowSymlinks
 RewriteEngine on
-
-# 重写规则
-RewriteRule ^info$   index.php?info=all [nc,qsa]
-RewriteRule ^info/(\d+)$   index.php?info=$1 [nc,qsa]
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /index.php/$1 [L]
