@@ -6,8 +6,8 @@ if (!defined('APP_API')) {
 define('APP_NAME', 'InPanel');
 define('APP_SITE', 'https://inpanel.org');
 define('APP_VERSION', '1.1.1');
-define('APP_BUILD', '21');
-define('APP_RELEASE', '2019-12-24 05:58:01 GMT+0800');
+define('APP_BUILD', '22');
+define('APP_RELEASE', '2020-04-05 03:30:00 GMT+0800');
 define('APP_DEBUG', 0);
 header("X-Powered-By: INPANEL");
 header("Copyright: INPANEL");
