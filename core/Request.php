@@ -27,19 +27,21 @@ class Request
     // GET 获取信息
     private static function getData($request_data)
     {
-        $s = $request_data['s'];
-        if (isset($s) && $s == 'latest') {
-            $configs = array();
-            $path = ROOT . '/core/latest/index.php';
-            if (file_exists($path)) {
-                $configs = include $path;
-                return $configs;
-            }
-        } elseif (isset($s)) {
-            $path = ROOT . '/core/' . $s . '/index.php';
-            if (file_exists($path)) {
-                $configs = include $path;
-                return $configs;
+        if (isset($request_data['s'])) {
+            $s = $request_data['s'];
+            if ($s == 'latest') {
+                $configs = array();
+                $path = ROOT . '/core/latest/index.php';
+                if (file_exists($path)) {
+                    $configs = include $path;
+                    return $configs;
+                }
+            } else {
+                $path = ROOT . '/core/' . $s . '/index.php';
+                if (file_exists($path)) {
+                    $configs = include $path;
+                    return $configs;
+                }
             }
         }
     }
